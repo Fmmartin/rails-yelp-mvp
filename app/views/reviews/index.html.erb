@@ -1,0 +1,10 @@
+<h1> Restaurant review </h1>
+
+<ul>
+  <% @reviews.each do | review | %>
+    <li>Rating: <%= review.rating %> / 5</li>
+    <li><%= review.content %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back', restaurant_path(params[:restaurant_id]) %>
